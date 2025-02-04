@@ -1,5 +1,11 @@
 docker run --name=todo-db -e POSTGRES_PASSWORD='qwerty' -p 5436:5432 -d --rm postgres
 
+зайти в контейнер
+docker exec -it todo-db bash
+
+запустить базу в образе
+psql -U postgres
+
 Библиотека для работы с миграциями
 go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
 
